@@ -8,6 +8,26 @@ const int N=3;
 double start[N]={0.33,0.33,0.34};
 double a[N][N];
 
+void MatrixMultiple()
+{
+    for(int i=0;i<N;i++)
+    {
+        double temp=0;
+        for(int j=0;j<N;j++)
+        {
+            temp=temp+a[i][j]*start[j];
+        }
+        start[i]=temp;
+    }
+}
+void Transfer(int times)
+{
+    for(int i=0;i<times;i++)
+    {
+
+    }
+}
+
 int main()
 {
     for(int i=0;i<N;i++)
