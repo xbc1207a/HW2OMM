@@ -8,6 +8,15 @@ const int N=3;
 double start[N]={0.33,0.33,0.34};
 double a[N][N];
 
+double Probability(int *q,int t)
+{
+    double p = start[ q[0] ];
+    for (int i=1; i<t; i++)
+    {
+        p=p*a[ q[i-1] ][ q[i] ];
+    }
+    return p;
+}
 void MatrixMultiple()
 {
     for(int i=0;i<N;i++)
