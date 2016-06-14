@@ -27,6 +27,23 @@ void Transfer(int times)
         MatrixMultiple();
     }
 }
+void Print()
+{
+    for(int i=0;i<N;i++)
+    {
+        printf("start[%d]=%f ",i,start[i]);
+    }
+    cout<<endl<<endl;
+    for(int i=0;i<N;i++)
+    {
+        for(int j=0;j<N;j++)
+        {
+            printf("a[%d][%d]=%f ",i,j,a[i][j]);
+        }
+        cout<<endl;
+    }
+    cout<<endl;
+}
 
 int main()
 {
