@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<math.h>
 #include<iostream>
+#include<stdlib.h>
 using namespace std;
 
 const int N=3;
@@ -56,6 +57,8 @@ void Print()
 
 int main()
 {
+    int option=0;
+    // initialize the matrix
     for(int i=0;i<N;i++)
     {
         for(int j=0;j<N;j++)
@@ -64,6 +67,34 @@ int main()
             else a[i][j]=0.33;
         }
     }
+    // end initialize the matrix
+    do
+    {
+        Print();
+        cout<<"(1) do 50 training"<<endl;
+        cout<<"(2) nothing"<<endl;
+        cout<<"(3) bye"<<endl;
+        cout<<"input the option >>";
+
+        cin>>option;
+
+        system("cls");
+
+        switch( option )
+        {
+        case 1:
+            Transfer(50);
+            break;
+        case 2:
+            break;
+        case 3:
+            cout<<"Bye"<<endl;
+            break;
+        default:
+            cout<<"fuck you"<<endl;
+            break;
+        }
+    }while( option!=3 );
 
     return 0;
 }
